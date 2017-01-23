@@ -1,10 +1,9 @@
 ---
-title: "text_analysis"
-author: "Parveen Sarana"
-date: "December 1, 2016"
+title: "How to start"
+author: "Parveen Kaur"
+date: "January 22nd, 2017"
 output: github_document
 ---
-# A beginners guide to Natural Language Processing [How to start]
 
 Natural language processing is a way to to have a computer understand human langugage. We can manipulate the data as we would do just with numbers but this time on words - it's almost... magical! So here I will apply natural language processing in R on the most magical of series, Harry Potter by J.K. Rowling in regards to sentiment analysis. 
 
@@ -85,9 +84,11 @@ wordcountbar <- ggplot(data = wordcount  , aes(x = names, y = words)) +
   ggtitle("Word Count by Book") +
   xlab("Book Title") +
   ylab("Total Word Count") 
-ggsave("../results/total_wordcount_series.png")
+ggsave("../results/total_wordcount_series.jpg")
 wordcountbar
 ```
+
+
 Interestingly, we see that the length of the book increases in relation to it's position in the series. We see taht the Sorcer's Stone, the first book in the series, is also the shortest and for Deathly Hallows, the last book in the series, it is also the longest.
 
 ### Character Importance
@@ -177,8 +178,9 @@ dcountp <- ggplot(data = charscount  , aes(x = names), group = 1) +
                       values = c("#e41a1c", "#377eb8",  "#ff7f00", "#4daf4a", "#984ea3", "#ffff33"))
 
 dcountp
-ggsave("../results/main_character_mentions.png")
+ggsave("../results/main_character_mentions.jpg")
 ```
+
 From our visualization, we are able to see the importance (as defined by total character numbers across the series), of each character in relation to other main characters. As we suspected Harry, Ron and Hermione are at the top - except in Goblet of Fire where Professor Dumbledore is actually by our measure of importance, more of an important character than Hermione. 
 
 There are many missing pieces with this analysis. My fellow Potterheads will know that many of these characters go by many different aliases. Looking specifically at Lord Voldemort, he is also referred to as "He-Who-Must-Be-Named" or the "Dark Lord". These type of details will enhance our analysis and make a more accurate conclusion in regards to ranking the importance of main characters. This is a great next step.
